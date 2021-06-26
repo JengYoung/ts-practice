@@ -42,7 +42,7 @@ function isAction(v: User | Action): v is Action {
 function process(v: User | Action): string {
     // 특정 메소드가 어떤 interface안에 있다면, 이를 활용 가능!   
     if (isAction(v)) {
-        return v.do()
+        return v.do();
     } else {
         return v.name;
     }
