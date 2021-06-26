@@ -1,8 +1,8 @@
-function add (a,b) {
+function add (a: number,b: number) {
     return a + b;
 };
 export default add;
 
-export function minus(a,b) {
+export function minus(a: number, b: number) {
     return a - b;
 }
