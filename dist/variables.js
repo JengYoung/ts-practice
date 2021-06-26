@@ -5,8 +5,6 @@ function outer() {
     if (true) {
         var score = 0;
     }
-    var b;
-    b = 0;
     for (var i = 0; i < 3; i++) {
         setTimeout(function () {
             console.log(i);
