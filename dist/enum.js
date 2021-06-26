@@ -14,7 +14,6 @@ var StarbucksGrade2;
 ;
 console.log(StarbucksGrade);
 function getDiscount(v) {
-    console.log("inner: ", v);
     switch (v) {
         case StarbucksGrade.WELCOME:
             return 0;
