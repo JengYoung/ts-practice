@@ -75,14 +75,15 @@ export class Game {
     }
 
     isCurrentUserPiece(cell: Cell) {
-        return cell !== null && cell.getPiece() !== null && cell.getPiece().ownerType === this.currentPlayer.type;
+        return cell.getPiece() !== null && cell.getPiece() !== undefined && cell.getPiece().ownerType === this.currentPlayer.type;
     }
 
     //셀 선택
     select(cell: Cell) {
+        console.log("여기", cell.getPiece())
         // 피스가 없는 셀을 선택할 시 리턴 처리.
-        if (cell.getPiece() == null) {
-            null;
+        if (cell.getPiece() === undefined) {
+            return;
         }
         // 있긴 한데 자기 말이 아닌 경우
         if (cell.getPiece().ownerType !== this.currentPlayer.type) {

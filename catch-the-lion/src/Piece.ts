@@ -87,10 +87,11 @@ export class Griff extends DefaultPiece {
     
 export class Chick extends DefaultPiece {
     canMove(pos: Position) {
-    return this.currentPosition.row + ((this.ownerType == PlayerType.UPPER) ? +1 : -1) === pos.row;
+        if (!this.ownerType) return;
+        return this.currentPosition.row + ((this.ownerType === PlayerType.UPPER) ? +1 : -1) === pos.row;
     }
 
     render(): string {
-    return `<img class="piece ${this.ownerType}" src="${chickenImage}" width="90%" height="90%"/>`;
+        return `<img class="piece ${this.ownerType}" src="${chickenImage}" width="90%" height="90%"/>`;
     }
 }
